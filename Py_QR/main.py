@@ -5,7 +5,7 @@ title = input("Give your QR code a title! >>")
 text = input("What would you like your QR code to say?")
 
 file_name_svg = title + ".svg"
-file_name_svg = title + ".png"
+file_name_png = title + ".png"
 
 url = pyqrcode.create(text)
 
