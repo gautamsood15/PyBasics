@@ -49,7 +49,23 @@ def edit_db():
     except Exception as e:
         print(e)
 
-        
+
+
+def get_user_info_db():
+    target_name = input("Who do you want to see information about? >> ")
+    rows = cursor.execute("SELECT name, age, skills FROM people WHERE name = ?", (target_name),).fetchall()
+    # rows [(name, age, skills)]
+
+
+    name = rows[0][0]
+    age = rows[0][1]
+    skills = rows[0][2]
+
+    print(f"{name} is {age} years old and works as {skills}.")
+
+
+
+
 
 
 
