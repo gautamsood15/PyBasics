@@ -17,4 +17,22 @@ def user_is_unique(name):
             return False
     return True
 
+def insert_db():
+    name = input("Name >> ")
+
+    if user_is_unique(str(name)):
+        age = input("Age >> ")
+        skills = input("Skills >> ")
+
+        if name != "" and age != "" and skills != "":
+            cursor.execute(f"INSERT INTO people VALUES ('{name}', '{age}', '{skills}')")
+            connection.commit()
+            print(name + " has been added to the database!")
+
+        else:
+            print("One of the fields are empty! Please try again!")
+            insert_db()
+    else:
+        print("Name is already in the database!")
+
 
