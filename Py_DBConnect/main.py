@@ -75,6 +75,16 @@ def delete_db():
 
 
 
+def display_db():
+    rows = cursor.execute("SELECT name, age, skills FROM people ORDER BY name ASC").fetchall()
+
+    print("Users: ")
+    for user in rows:
+        print(f"- {user[0]} - {user[1]} - {user[2]}")
+
+
+
+def 
 
 
 
