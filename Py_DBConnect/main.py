@@ -84,7 +84,12 @@ def display_db():
 
 
 
-def 
+def exit_db():
+    cursor.close()
+    connection.close()
+    sys.exit()
+
+
 
 
 
