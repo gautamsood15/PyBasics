@@ -65,6 +65,12 @@ def get_user_info_db():
 
 
 
+def delete_db():
+    name = input("Type the name of the person that you would like to delete >> ")
+    if name != "":
+        cursor.execute("DELETE FROM people WHERE name = ?", (name,))
+        connection.commit()
+        print("User successfully deleted!")
 
 
 
