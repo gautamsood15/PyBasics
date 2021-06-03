@@ -91,22 +91,28 @@ def exit_db():
 
 
 
+def select_options():
+    options = input("""
+    ---------------------------------
+    Type '0' to exit
+    Type '0' to insert a new user
+    Type '0' to display users
+    Type '0' to delete user
+    Type '0' to edit user
+    Type '0' to get user information 
+    ---------------------------------
+    >> """)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if options == "0":
+        exit_db()
+    if options == "1":
+        insert_db()
+    if options == "2":
+        display_db()
+    if options == "3":
+        delete_db()
+    if options == "4":
+        edit_db()
+    if options == "5":
+        get_user_info_db()
