@@ -95,11 +95,11 @@ def select_options():
     options = input("""
     ---------------------------------
     Type '0' to exit
-    Type '0' to insert a new user
-    Type '0' to display users
-    Type '0' to delete user
-    Type '0' to edit user
-    Type '0' to get user information 
+    Type '1' to insert a new user
+    Type '2' to display users
+    Type '3' to delete user
+    Type '4' to edit user
+    Type '5' to get user information 
     ---------------------------------
     >> """)
 
@@ -116,3 +116,6 @@ def select_options():
         edit_db()
     if options == "5":
         get_user_info_db()
+
+
+
