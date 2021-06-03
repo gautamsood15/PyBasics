@@ -119,3 +119,6 @@ def select_options():
 
 
 
+#infinite Loop
+while True:
+    select_options()
