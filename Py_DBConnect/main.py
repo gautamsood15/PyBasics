@@ -53,7 +53,7 @@ def edit_db():
 
 def get_user_info_db():
     target_name = input("Who do you want to see information about? >> ")
-    rows = cursor.execute("SELECT name, age, skills FROM people WHERE name = ?", (target_name),).fetchall()
+    rows = cursor.execute("SELECT name, age, skills FROM people WHERE name = ?", (target_name,),).fetchall()
     # rows [(name, age, skills)]
 
 
